@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu Memory Épique</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="memory-game.css">
+</head>
+<body class="bg-dark text-white">
+    <div class="container text-center mt-5">
+        <h1>Jeu Memory Épique</h1>
+        <div id="score-display" class="mt-3">Score: 0</div>
+        <div id="combo-display" class="mt-3" style="visibility: hidden;"></div>
+        <div id="game-board" class="row justify-content-center mt-4"></div>
+        <button id="restart-btn" class="btn btn-danger mt-4">Recommencer</button>
+        <button id="switch-game-btn" class="btn btn-dark mt-4">Passer au jeu Memory (chiffres)</button>
+    </div>
+    <script src="memory-game.js"></script>
+</body>
+</html>

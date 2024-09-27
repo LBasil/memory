@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Mémorisation Extrême</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h1 class="mb-4">Jeu de Mémorisation Extrême</h1>
+        <div id="score-area" class="mb-4">
+            <p>Score : <span id="score">0</span></p>
+            <p>Vies : <span id="lives">3</span></p>
+        </div>
+        <div id="game-area" class="d-flex flex-column justify-content-center align-items-center">
+            <div id="sequence-area" class="mb-3"></div>
+            <button id="start-btn" class="btn btn-primary mb-3">Commencer</button>
+            <input type="text" id="input-area" class="form-control mb-3" placeholder="Tape la séquence" disabled>
+            <button id="submit-btn" class="btn btn-success mb-3" disabled>Soumettre</button>
+            <div id="feedback-area"></div>
+        </div>
+        <div id="powers-area" class="mt-4">
+            <h3>Pouvoirs disponibles</h3>
+            <button id="slow-time-btn" class="btn btn-info mb-2" disabled>Ralentir le temps (Débloqué à 50 pts)</button>
+            <button id="extra-life-btn" class="btn btn-warning mb-2" disabled>Vie supplémentaire (Débloqué à 100 pts)</button>
+        </div>
+        <div id="recap-area" class="mt-5"></div>
+        <button id="rules-btn" class="btn btn-secondary mt-5" data-toggle="modal" data-target="#rulesModal">Voir les règles</button>
+        <button id="switch-game-btn" class="btn btn-dark mt-5">Passer au jeu Memory (cartes)</button>
+        
+        <!-- Modal des règles -->
+        <div class="modal fade" id="rulesModal" tabindex="-1" aria-labelledby="rulesModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="rulesModalLabel">Règles du jeu</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>1. Mémorise la séquence affichée à l'écran et tape-la correctement.</p>
+                        <p>2. Ton score augmente à chaque séquence réussie, et ton combo aussi.</p>
+                        <p>3. Débloque des pouvoirs spéciaux à certains paliers de score :</p>
+                        <ul>
+                            <li>50 points : Ralentir le temps</li>
+                            <li>100 points : Vie supplémentaire</li>
+                        </ul>
+                        <p>4. Tu perds une vie si tu fais une erreur. Le jeu se termine quand tu n'as plus de vies.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

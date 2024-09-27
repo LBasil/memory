@@ -1,0 +1,40 @@
+body {
+    background-color: #1a1a2e;
+    color: #eaeaea;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h3 {
+    color: #ffdd59;
+}
+
+#game-area {
+    background-color: #0f3460;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#sequence-area {
+    font-size: 2.5rem;
+    color: #f4d03f;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+button {
+    font-size: 1.1rem;
+}
+
+#score-area, #powers-area, #recap-area {
+    font-size: 1.3rem;
+}
+
+#rulesModal .modal-content {
+    background-color: #16213e;
+    color: #eaeaea;
+}
+
+.modal-header, .modal-footer {
+    border: none;
+}
