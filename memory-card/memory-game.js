@@ -149,3 +149,8 @@ function resetGame() {
 
 // Démarrer le jeu au chargement
 createBoard();
+
+// Bouton pour changer de jeu
+document.getElementById('switch-game-btn').addEventListener('click', () => {
+    window.location.href = '../index.html';
+});
