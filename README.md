@@ -1,14 +1,12 @@
 # Extreme Memory
 
-Jeu de mémoire (paires de cartes) avec plusieurs modes, en JavaScript vanilla (HTML, CSS, Bootstrap), sans build.
+Deux jeux de mémoire en JavaScript vanilla (Bootstrap 4), sans build.
+
+- **Séquence** (`index.html`) : un motif s'affiche, il faut le reproduire. Trois vies, des pouvoirs qui se débloquent à 50 et 100 points, et le meilleur score est conservé dans le navigateur.
+- **Paires** (`memory-card/memory-game.html`) : retourner les cartes deux par deux pour retrouver les paires.
 
 ## Lancer
 
-Ouvrir `index.html` dans un navigateur. La variante autonome du jeu se trouve dans `memory-card/`.
-
-## Fichiers
-
-- `index.html`, `script.js`, `styles.css` : le jeu principal
-- `memory-card/` : première version du jeu
+Ouvrir `index.html` dans un navigateur. Le bouton de changement de jeu mène à la version paires.
 
 Démo : https://memory-rosy.vercel.app/
