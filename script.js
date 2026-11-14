@@ -2,6 +2,9 @@ let sequence = [];
 let userSequence = [];
 let level = 1;
 let score = 0;
+let bestScore = 0;
+try { bestScore = parseInt(localStorage.getItem('memory-best-score'), 10) || 0; } catch (e) { /* stockage indisponible */ }
+document.getElementById('best-score').textContent = bestScore;
 let combo = 0;
 let maxCombo = 0;
 let lives = 3;
@@ -110,6 +113,11 @@ document.getElementById('extra-life-btn').addEventListener('click', () => {
 });
 
 function endGame() {
+    if (score > bestScore) {
+        bestScore = score;
+        document.getElementById('best-score').textContent = bestScore;
+        try { localStorage.setItem('memory-best-score', bestScore); } catch (e) { /* ignoré */ }
+    }
     document.getElementById('feedback-area').textContent = `Partie terminée ! Score : ${score}`;
     document.getElementById('input-area').disabled = true;
     document.getElementById('submit-btn').disabled = true;
